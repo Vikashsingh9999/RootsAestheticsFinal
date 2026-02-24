@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roots Aesthetics Treatments - Expert aesthetic treatments including Neuromodulators, Dermal Fillers, Skin Rejuvenation, and more by Dr. Anju Mehta in London.">
+    <title>Treatments | Roots Aesthetics London</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-nav {
+            background: rgba(250, 245, 238, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+        }
+        .mobile-menu.open {
+            max-height: 600px; /* large enough for menu content including treatments */
+            opacity: 1;
+        }
+
+        /* Treatments Dropdown Menu */
+        .nav-dropdown {
+            position: relative;
+        }
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            min-width: 220px;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+            z-index: 100;
+            padding: 0.5rem 0;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.625rem 1.25rem;
+            color: #57534e;
+            font-size: 0.875rem;
+            transition: background-color 150ms ease, color 150ms ease;
+        }
+        .nav-dropdown-menu a:hover {
+            background-color: #fafaf9;
+            color: #1c1917;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        ::selection { background: #e7e5e4; color: #1c1917; }
+    </style>
+</head>
+<body class="text-stone-800 font-sans selection:bg-stone-200" style="background-color: rgba(250, 245, 238, 1);">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 group">
+                <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <div class="nav-dropdown">
+                    <a href="index.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors flex items-center gap-1">
+                        Treatments
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="index.html#neuromodulators">Neuromodulators</a>
+                        <a href="index.html#dermal-fillers">Dermal Fillers</a>
+                        <a href="index.html#skin-rejuvenation">Skin Rejuvenation</a>
+                        <a href="index.html#energy-based-devices">Energy Based Devices</a>
+                        <a href="index.html#hair-restoration">Hair Restoration</a>
+                    </div>
+                </div>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="mailto:dranju.mehta1@gmail.com" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white text-xs font-medium rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-200/50 transition-all duration-300">
+                    Get in Touch
+                </a>
+                <button id="mobileMenuButton" aria-expanded="false" class="md:hidden p-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-white border-t border-stone-100 shadow-lg z-50">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Treatments</a>
+                    <div class="pl-4 flex flex-col gap-2 border-l-2 border-stone-200">
+                        <a href="index.html#neuromodulators" class="text-xs text-stone-600 hover:text-stone-900">Neuromodulators</a>
+                        <a href="index.html#dermal-fillers" class="text-xs text-stone-600 hover:text-stone-900">Dermal Fillers</a>
+                        <a href="index.html#skin-rejuvenation" class="text-xs text-stone-600 hover:text-stone-900">Skin Rejuvenation</a>
+                        <a href="index.html#energy-based-devices" class="text-xs text-stone-600 hover:text-stone-900">Energy Based Devices</a>
+                        <a href="index.html#hair-restoration" class="text-xs text-stone-600 hover:text-stone-900">Hair Restoration</a>
+                    </div>
+                </div>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-700 hover:text-stone-900">Dr. Mehta</a>
+                <a href="../blog/index.html" class="text-sm font-medium text-stone-700 hover:text-stone-900">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+                <a href="mailto:dranju.mehta1@gmail.com" class="mt-2 inline-flex items-center justify-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-medium tracking-tighter text-stone-900 leading-tight mb-6">
+                Our Treatments
+            </h1>
+            <p class="text-lg md:text-xl text-stone-500 max-w-3xl mx-auto leading-relaxed font-light">
+                Treatments offered focus on restoring skin, hair, and tissue health at the root. From precision injectables and regenerative therapies to energy-based treatments, hair restoration, and wellness, every approach is quietly corrective and grounded in anatomy and long-term tissue health.
+            </p>
+        </div>
+    </header>
+
+    <!-- Treatments Section -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="space-y-8 md:space-y-10">
+            
+            <!-- 1. Neuromodulators -->
+            <section id="neuromodulators" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
+                        <img src="../images/Nwu.jpeg" alt="Neuromodulators" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <h2 class="text-xl md:text-2xl font-semibold text-stone-900 mb-4">Neuromodulators</h2>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base mb-5">
+                            Soften fine lines and expression-related wrinkles with precisely placed neuromodulators designed to refresh the face while preserving natural movement and expression.
+                        </p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Frown lines</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Forehead lines</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Crows feet</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Bunny lines</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Lip flip</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Chin dimpling</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Downturned mouth corners</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Excessive sweating</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Bruxism/ jaw line slimming</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Neck bands</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Dermal Fillers -->
+            <section id="dermal-fillers" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="aspect-[4/3] md:aspect-[3/2] overflow-hidden md:order-2">
+                        <img src="../images/360_F_1486897903_fBuysAXppfqcpk8WjLZzUvrWL1dvgILv.jpg" alt="Dermal Fillers" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                        <h2 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3">Dermal Fillers</h2>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base mb-4">
+                            Subtle volume restoration and contour refinement using hyaluronic acid fillers — precise, balanced, and intentionally restrained.
+                        </p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Full face rejuvenation and individual areas</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Skin Rejuvenation -->
+            <section id="skin-rejuvenation" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
+                        <img src="../images/beautiful-skin-1.webp" alt="Skin Rejuvenation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <h2 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3">Skin Rejuvenation</h2>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base mb-4">
+                            Skin rejuvenation, rooted in regeneration. A considered approach to strengthening tissue quality, refining texture, and enhancing long-term collagen health by supporting the skin's natural repair processes over time.
+                        </p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Polynucleotides</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Profhilo</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Sunekos</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">NCTF</span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Microneedling</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Energy Based Devices -->
+            <section id="energy-based-devices" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="aspect-[4/3] md:aspect-[3/2] overflow-hidden md:order-2">
+                        <img src="../images/depositphotos_64412309-stock-photo-friendly-middle-aged-woman.jpg" alt="Energy Based Devices" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                        <h2 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3">Energy Based Devices</h2>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base mb-4">
+                            A non-invasive, non-surgical ultrasound treatment done once a year that stimulates collagen renewal within the skin, helping to subtly lift, firm, and improve skin quality over time — without needles or downtime.
+                        </p>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-stone-100 text-stone-700 text-sm font-medium">Ultherapy</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Hair Restoration -->
+            <section id="hair-restoration" class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
+                        <img src="../images/photo-1564141696939-9eb6e957ccfc.avif" alt="Hair Restoration" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col justify-center">
+                        <h2 class="text-xl md:text-2xl font-semibold text-stone-900 mb-3">Hair Restoration</h2>
+                        <p class="text-stone-600 leading-relaxed text-sm md:text-base mb-4">
+                            Extensive hair restoration programme. For details visit <a href="https://www.thehairoffice.com" target="_blank" rel="noopener noreferrer" class="text-stone-900 underline hover:text-stone-700">www.thehairoffice.com</a>
+                        </p>
+                        <div class="mt-4 p-4 bg-stone-50 rounded-lg border border-stone-200">
+                            <p class="text-sm font-medium text-stone-900 mb-1">The Hair Office</p>
+                            <p class="text-sm text-stone-600">
+                                12 Bank Street, Canary Wharf<br>
+                                E14 5EW
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 md:mt-24 text-center">
+            <div class="bg-gradient-to-r from-stone-900 to-stone-800 rounded-2xl p-8 md:p-12 text-white">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4">Ready to Begin Your Journey?</h2>
+                <p class="text-stone-300 mb-6 max-w-2xl mx-auto">
+                    Get in touch to book a full consultation, where we assess your needs carefully and recommend the most appropriate, personalised approach to care.
+                </p>
+                <a href="mailto:dranju.mehta1@gmail.com" class="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-stone-900 text-sm font-medium rounded-full hover:bg-stone-100 transition-all duration-300 shadow-lg">
+                    Get in Touch
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 mb-6">
+                        <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+                    </a>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+                        Refining beauty through medical excellence. London based aesthetic clinic led by Dr. Anju Mehta.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Treatments</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Anti-Wrinkle</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Dermal Fillers</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Skin Boosters</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">All Treatments</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Clinic</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../index.html#about" class="hover:text-stone-900 transition-colors">About Dr. Mehta</a></li>
+                        <li><a href="../blog/index.html" class="hover:text-stone-900 transition-colors">Blog</a></li>
+                        <li><a href="../index.html#booking" class="hover:text-stone-900 transition-colors">Contact</a></li>
+                        <li><a href="mailto:dranju.mehta1@gmail.com" class="hover:text-stone-900 transition-colors">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Locations</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-stone-400 flex-shrink-0 mt-0.5"></i>
+                            <span>Roots Aesthetics<br>2 Larkfield Rd, Richmond<br>TW9 2PF</span>
+                        </li>
+                        <li class="flex items-start gap-2 mt-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-stone-400 flex-shrink-0 mt-0.5"></i>
+                            <span>The Hair Office<br>12 Bank Street, Canary Wharf<br>E14 5EW</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-stone-500">© 2026 Roots Aesthetics. All rights reserved. London, UK.</p>
+                <div class="flex items-center gap-6 text-xs text-stone-500">
+                    <a href="/privacy" class="hover:text-stone-900 transition-colors">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-stone-900 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = mobileMenuButton.querySelector('.menu-icon');
+        const closeIcon = mobileMenuButton.querySelector('.close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen);
+            menuIcon.classList.toggle('hidden', isOpen);
+            closeIcon.classList.toggle('hidden', !isOpen);
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
