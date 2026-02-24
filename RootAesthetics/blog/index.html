@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roots Aesthetics Blog - Expert insights on aesthetic treatments, skincare, and beauty tips from Dr. Anju Mehta in London.">
+    <title>Blog | Roots Aesthetics London</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-nav {
+            background: rgba(250, 245, 238, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+        }
+        .mobile-menu.open {
+            max-height: 420px;
+            opacity: 1;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        ::selection { background: #e7e5e4; color: #1c1917; }
+    </style>
+</head>
+<body class="text-stone-800 font-sans selection:bg-stone-200" style="background-color: rgba(250, 245, 238, 1);">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 group">
+                <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html#results" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Results</a>
+                <a href="../index.html#treatments" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Treatments</a>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Dr. Mehta</a>
+                <a href="index.html" class="text-sm font-medium text-stone-900 border-b-2 border-stone-900 transition-colors">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="../book-Appointment/index.html" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white text-xs font-medium rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-200/50 transition-all duration-300">
+                    Book Consultation
+                </a>
+                <button id="mobileMenuButton" aria-expanded="false" class="md:hidden p-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-white border-t border-stone-100 shadow-lg z-50">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="../index.html#results" class="text-sm font-medium text-stone-700 hover:text-stone-900">Results</a>
+                <a href="../index.html#treatments" class="text-sm font-medium text-stone-700 hover:text-stone-900">Treatments</a>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-700 hover:text-stone-900">Dr. Mehta</a>
+                <a href="index.html" class="text-sm font-medium text-stone-900">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+                <a href="../book-Appointment/index.html" class="mt-2 inline-flex items-center justify-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-medium tracking-tighter text-stone-900 leading-tight mb-6">
+                Aesthetic Insights & <br>
+                <span class="text-stone-400">Expert Advice</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-500 max-w-2xl mx-auto leading-relaxed font-light">
+                Discover the latest in aesthetic medicine, skincare tips, and treatment insights from Dr. Anju Mehta and the Roots Aesthetics team.
+            </p>
+        </div>
+    </header>
+
+    <!-- Blog Posts -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            
+
+            <!-- Blog Post 7 - Aesthetic Trends 2026 -->
+            <article class="blog-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                     data-blog-id="aesthetic-trends-2026"
+                     data-blog-title="Aesthetic Trends for 2026 — Where Skin Medicine Is Heading (and Why Less Is More)"
+                     data-blog-date="January 15, 2026"
+                     data-blog-read-time="8 min read"
+                     data-blog-category="Trends"
+                     data-blog-image="../images/Blog1.jpeg">
+                <div class="aspect-[4/3] relative overflow-hidden">
+                    <img src="../images/Blog1.jpeg" alt="Aesthetic Trends 2026" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Trends</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Aesthetic Trends for 2026 — Where Skin Medicine Is Heading (and Why Less Is More)
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Aesthetic medicine is evolving — quietly, intelligently, and with far more respect for biology than ever before. Discover what's shaping modern aesthetics and why it matters for your skin.
+                    </p>
+                    <div class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 8 - Science of Collagen -->
+            <article class="blog-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                     data-blog-id="science-of-collagen"
+                     data-blog-title="The Science of Collagen — Why Skin Quality Matters More Than Ever"
+                     data-blog-date="January 10, 2026"
+                     data-blog-read-time="7 min read"
+                     data-blog-category="Science"
+                     data-blog-image="../images/beauty-woman_ZRLYZIH975.jpg">
+                <div class="aspect-[4/3] relative overflow-hidden">
+                    <img src="../images/beauty-woman_ZRLYZIH975.jpg" alt="Science of Collagen" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Science</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        The Science of Collagen — Why Skin Quality Matters More Than Ever
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Collagen is often talked about — but rarely understood. Discover what collagen actually does, how it declines with age, and how modern aesthetic treatments genuinely support it.
+                    </p>
+                    <div class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+      
+    </main>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- Modal Header Image -->
+            <div class="w-full h-64 md:h-80 relative overflow-hidden">
+                <img id="modalBlogImage" src="" alt="Blog Header" class="w-full h-full object-cover">
+                <button id="closeBlogModal" class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-stone-600 hover:text-stone-900 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-6 md:p-8">
+                <div class="flex items-center gap-3 text-xs text-stone-500 mb-4">
+                    <span id="modalBlogCategory" class="px-2 py-1 bg-stone-100 rounded text-stone-700"></span>
+                </div>
+                <h1 id="modalBlogTitle" class="text-2xl md:text-3xl font-semibold text-stone-900 mb-6"></h1>
+                <div id="modalBlogContent" class="prose prose-stone max-w-none text-stone-700 leading-relaxed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 mb-6">
+                        <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+                    </a>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+                        Refining beauty through medical excellence. London based aesthetic clinic led by Dr. Anju Mehta.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Treatments</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../Anti-Wrinkle-Injections/index.html" class="hover:text-stone-900 transition-colors">Anti-Wrinkle</a></li>
+                        <li><a href="../Dermal-Fillers/index.html" class="hover:text-stone-900 transition-colors">Dermal Fillers</a></li>
+                        <li><a href="../Skin-Boosters/index.html" class="hover:text-stone-900 transition-colors">Skin Boosters</a></li>
+                        <li><a href="../index.html#treatments" class="hover:text-stone-900 transition-colors">All Treatments</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Clinic</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../index.html#about" class="hover:text-stone-900 transition-colors">About Dr. Mehta</a></li>
+                        <li><a href="index.html" class="hover:text-stone-900 transition-colors">Blog</a></li>
+                        <li><a href="../Real-Stories/index.html" class="hover:text-stone-900 transition-colors">Patient Results</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Contact</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="tel:+447580748097" class="hover:text-stone-900 transition-colors">+44 7580 748097</a></li>
+                        <li><a href="mailto:info@RootsAesthetics.co.uk" class="hover:text-stone-900 transition-colors">Email Us</a></li>
+                        <li><a href="../index.html#booking" class="hover:text-stone-900 transition-colors">Visit Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-stone-500">© 2024 Roots Aesthetics. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-xs text-stone-500">
+                    <a href="/privacy" class="hover:text-stone-900 transition-colors">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-stone-900 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Blog content data
+        const blogContent = {
+            'aesthetic-trends-2026': {
+                title: 'Aesthetic Trends for 2026 — Where Skin Medicine Is Heading (and Why Less Is More)',
+                date: 'January 15, 2026',
+                readTime: '8 min read',
+                category: 'Trends',
+                image: '../images/Blog1.jpeg',
+                content: `
+                    <p class="text-lg text-stone-600 mb-6 italic">Aesthetic medicine is evolving — quietly, intelligently, and with far more respect for biology than ever before.</p>
+                    
+                    <p class="mb-4">In 2026, the most meaningful progress in aesthetics isn't about more product, stronger devices, or dramatic overnight change. It's about precision, regeneration, and long-term tissue health.</p>
+                    
+                    <p class="mb-6">At Roots Aesthetics, we see these shifts not as trends to chase, but as a return to first principles of good medicine.</p>
+                    
+                    <p class="mb-8 font-semibold text-stone-900">Here's what's shaping modern aesthetics — and why it matters for your skin.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">1. Regeneration Over Replacement</h2>
+                    <p class="mb-4">The focus has moved decisively away from "filling" faces and towards supporting the skin's own repair mechanisms.</p>
+                    <p class="mb-4">Modern treatments aim to:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Stimulate collagen and elastin</li>
+                        <li>Improve vascularity and cellular signalling</li>
+                        <li>Enhance skin quality rather than alter structure</li>
+                    </ul>
+                    <p class="mb-6">Patients are increasingly choosing therapies that work with biology, not against it — favouring gradual, cumulative improvement over immediate but artificial change.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">2. Dermal Fillers in 2026: Precision, Not Proliferation</h2>
+                    <p class="mb-4">In 2026, dermal fillers are no longer about adding volume indiscriminately. Their role is precise, restrained, and intentional.</p>
+                    <p class="mb-4">Used well, fillers quietly replace what time has genuinely taken — restoring balance, supporting structure, and softening transitions without altering identity or expression.</p>
+                    <p class="mb-4">They are no longer the centre of aesthetic medicine, but a supporting tool within a broader strategy that prioritises skin health, movement, and longevity.</p>
+                    <p class="mb-4">Fillers are to be applied sparingly, placed thoughtfully, and planned with the future in mind.</p>
+                    <p class="mb-4">The aim is not visible augmentation.<br>It is harmony.</p>
+                    <p class="mb-6 italic text-stone-600">Well-placed filler should disappear into the face — not announce itself.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">3. Energy-Based Treatments Are Being Used More Thoughtfully</h2>
+                    <p class="mb-4">Non-invasive skin tightening and collagen-stimulating technologies remain powerful tools — but in 2026, their use is more selective and individualised.</p>
+                    <p class="mb-4">What's changed:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Better patient selection</li>
+                        <li>More conservative energy delivery</li>
+                        <li>Longer-term planning rather than one-off treatments</li>
+                    </ul>
+                    <p class="mb-6">The goal is not maximal inflammation — but controlled stimulation with predictable healing.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">4. Longevity Thinking Has Entered Aesthetics</h2>
+                    <p class="mb-4">Patients are no longer treating a single concern in isolation. They're asking:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>"How will this age over 5–10 years?"</li>
+                        <li>"Will this compromise future treatments?"</li>
+                        <li>"Is this maintaining or depleting my tissue?"</li>
+                    </ul>
+                    <p class="mb-4">This longevity-led mindset favours:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Early, subtle intervention</li>
+                        <li>Structured treatment planning</li>
+                        <li>Maintenance rather than correction</li>
+                    </ul>
+                    <p class="mb-6">It's not anti-aesthetic medicine — it's pro-tissue health.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">5. Restraint Is the New Marker of Expertise</h2>
+                    <p class="mb-4">In 2026, the most trusted practitioners are defined not by how much they do — but by what they choose not to do.</p>
+                    <p class="mb-6">Deep clinical judgement and thorough understanding of the anatomy and of ageing, honest conversations, and the confidence to delay or decline treatment are now central to high-quality aesthetic care.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">In Summary</h2>
+                    <p class="mb-4">Aesthetic medicine is maturing — becoming quieter, more scientific, and more respectful of the body.</p>
+                    <p class="mb-4">The future belongs to:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Regeneration over replacement</li>
+                        <li>Skin quality over volume</li>
+                        <li>Planning over impulse</li>
+                        <li>Medicine over marketing</li>
+                    </ul>
+                    <p class="mb-6">And ultimately, to patients who value natural results that last.</p>
+                `
+            },
+            'science-of-collagen': {
+                title: 'The Science of Collagen — Why Skin Quality Matters More Than Ever',
+                date: 'January 10, 2026',
+                readTime: '7 min read',
+                category: 'Science',
+                image: '../images/beauty-woman_ZRLYZIH975.jpg',
+                content: `
+                    <p class="mb-6">Collagen is often talked about — but rarely understood.</p>
+                    
+                    <p class="mb-6">It's marketed in creams, supplements, and injectables, yet many patients are unaware of what collagen actually does, how it declines with age, or how modern aesthetic treatments genuinely support it.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">What Is Collagen?</h2>
+                    <p class="mb-4">Collagen is the primary structural protein of the skin. It provides:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Strength</li>
+                        <li>Elasticity</li>
+                        <li>Structural support</li>
+                        <li>Resistance to gravity and movement</li>
+                    </ul>
+                    <p class="mb-4">Healthy collagen gives skin firmness and resilience. Depleted collagen leads to laxity, crepiness, fine lines, and loss of definition.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">Why Collagen Declines With Age</h2>
+                    <p class="mb-4">From our mid-20s onward:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Collagen production slows</li>
+                        <li>Existing collagen fibres fragment</li>
+                        <li>Skin becomes thinner and less elastic</li>
+                    </ul>
+                    <p class="mb-4">This process is influenced by:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Genetics</li>
+                        <li>UV exposure</li>
+                        <li>Hormonal changes</li>
+                        <li>Inflammation and lifestyle factors</li>
+                    </ul>
+                    <p class="mb-6">By the time visible ageing appears, collagen loss has often been ongoing for years.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">Why Adding Volume Doesn't Replace Collagen</h2>
+                    <p class="mb-4">Fillers can restore contour, but they do not repair collagen architecture.</p>
+                    <p class="mb-4">Without addressing skin quality:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Results may look heavy or unnatural</li>
+                        <li>Longevity of outcomes is reduced</li>
+                        <li>Tissue can become dependent rather than resilient</li>
+                    </ul>
+                    <p class="mb-6">This is why modern aesthetics focuses on collagen stimulation rather than camouflage.</p>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">How Modern Treatments Support Collagen</h2>
+                    <p class="mb-4">Evidence-led collagen support works by:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Creating controlled micro-injury</li>
+                        <li>Activating fibroblasts</li>
+                        <li>Encouraging new collagen and elastin formation</li>
+                    </ul>
+                    <p class="mb-4">The key is precision — overstimulation can exhaust tissue, while under-treatment delivers little benefit.</p>
+                    <p class="mb-6">At Roots Aesthetics, collagen-focused plans are:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Individualised</li>
+                        <li>Gradual</li>
+                        <li>Designed with long-term skin behaviour in mind</li>
+                    </ul>
+                    
+                    <h2 class="text-xl font-semibold text-stone-900 mt-8 mb-4">Collagen Is a Long Game</h2>
+                    <p class="mb-4">Collagen remodelling takes time. Improvements typically occur over months, not days.</p>
+                    <p class="mb-4">This is why responsible practitioners emphasise:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Treatment planning over quick fixes</li>
+                        <li>Maintenance schedules</li>
+                        <li>Skin health between treatments</li>
+                    </ul>
+                    <p class="mb-6">Good collagen today determines how your skin responds to treatments — and ageing — tomorrow.</p>
+                    
+                    <p class="mb-4 italic text-stone-600">Here in clinic, we don't chase instant transformation.</p>
+                    
+                    <p class="mb-4">We prioritise:</p>
+                    <ul class="list-disc list-inside mb-6 space-y-2 text-stone-700">
+                        <li>Skin integrity</li>
+                        <li>Tissue health</li>
+                        <li>Predictable, natural ageing</li>
+                    </ul>
+                    
+                    <p class="mb-6">Because strong skin ages quietly — and beautifully.</p>
+                    
+                    <p class="mt-8 font-semibold text-stone-900">- Choose your aesthetic doctor carefully -</p>
+                `
+            }
+        };
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = mobileMenuButton.querySelector('.menu-icon');
+        const closeIcon = mobileMenuButton.querySelector('.close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen);
+            menuIcon.classList.toggle('hidden', isOpen);
+            closeIcon.classList.toggle('hidden', !isOpen);
+        });
+
+        // Blog Modal Functionality
+        (function initBlogModal() {
+            const modal = document.getElementById('blogModal');
+            const closeBtn = document.getElementById('closeBlogModal');
+            const blogCards = document.querySelectorAll('.blog-card');
+            const modalImage = document.getElementById('modalBlogImage');
+            const modalTitle = document.getElementById('modalBlogTitle');
+            const modalCategory = document.getElementById('modalBlogCategory');
+            const modalContent = document.getElementById('modalBlogContent');
+
+            function openModal(blogId) {
+                const blog = blogContent[blogId];
+                if (!blog) return;
+
+                // Set modal content
+                modalImage.src = blog.image;
+                modalImage.alt = blog.title;
+                modalTitle.textContent = blog.title;
+                modalCategory.textContent = blog.category;
+                modalContent.innerHTML = blog.content;
+
+                // Show modal
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+
+            // Add click handlers to blog cards
+            blogCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const blogId = card.getAttribute('data-blog-id');
+                    if (blogId && blogContent[blogId]) {
+                        openModal(blogId);
+                    }
+                });
+            });
+
+            // Close modal handlers
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        })();
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
